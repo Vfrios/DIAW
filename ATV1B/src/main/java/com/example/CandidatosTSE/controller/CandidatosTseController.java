@@ -34,7 +34,7 @@ public class CandidatosTseController {
 
         model.addAttribute("candidatos", candidatos);
         model.addAttribute("totalEncontrado", candidatos.size());
-        model.addAttribute("Generos", service.listarGeneros());
+        model.addAttribute("generos", service.listarGeneros());
         model.addAttribute("escolaridades", service.listarEscolaridades());
         model.addAttribute("generoSelecionado", generoSel);
         model.addAttribute("escolaridadeSelecionada", escolaridadeSel);
