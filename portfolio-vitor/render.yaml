@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: portfolio-vitor-rios
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/portfolio
+    envVars:
+      - key: MAIL_USERNAME
+        sync: false
+      - key: MAIL_PASSWORD
+        sync: false
+      - key: MAIL_TO
+        sync: false

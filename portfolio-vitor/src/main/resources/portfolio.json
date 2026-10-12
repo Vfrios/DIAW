@@ -1,0 +1,185 @@
+{
+  "name": "Vitor Rios",
+  "role": {
+    "pt": "Estudante de TI · Transição de carreira",
+    "en": "IT student · Career transition"
+  },
+  "headline": {
+    "pt": "Transformo processos em sistemas que funcionam.",
+    "en": "I turn processes into working systems."
+  },
+  "about": {
+    "pt": "Sou Vitor de Freitas Rios, estudante da PUC Minas em transição de carreira para a área de tecnologia. Meu foco é análise de dados e automação: já trabalho com Excel e Power BI e uso programação para tirar processos manuais do papel. Desenvolvi um sistema web completo para montar propostas técnicas e calcular climatização, e participei de um projeto em equipe de gestão de tempo, do Design Thinking ao código.",
+    "en": "I'm Vitor de Freitas Rios, a PUC Minas student transitioning my career into technology. My focus is data analysis and automation: I work with Excel and Power BI and use programming to replace manual processes. I built a complete web system to assemble technical proposals and calculate HVAC loads, and took part in a team time-management project, from Design Thinking to code."
+  },
+  "facts": [
+    {
+      "label": {
+        "pt": "Formação",
+        "en": "Education"
+      },
+      "value": {
+        "pt": "PUC Minas — ICEI, Tecnologia da Informação",
+        "en": "PUC Minas — ICEI, Information Technology"
+      }
+    },
+    {
+      "label": {
+        "pt": "Área de atuação",
+        "en": "Focus"
+      },
+      "value": {
+        "pt": "Análise de dados e automação de processos",
+        "en": "Data analysis and process automation"
+      }
+    },
+    {
+      "label": {
+        "pt": "Interesses",
+        "en": "Interests"
+      },
+      "value": {
+        "pt": "Excel, Power BI, sistemas web, integração e exportação de documentos",
+        "en": "Excel, Power BI, web systems, integrations and document export"
+      }
+    },
+    {
+      "label": {
+        "pt": "Objetivo",
+        "en": "Goal"
+      },
+      "value": {
+        "pt": "Atuar em desenvolvimento e automação, em uma vaga de estágio ou júnior",
+        "en": "Work in development and automation, in an internship or junior role"
+      }
+    }
+  ],
+  "skills": [
+    "Python",
+    "JavaScript",
+    "Java",
+    "Spring Boot",
+    "React",
+    "SQLite",
+    "HTML e CSS",
+    "Excel",
+    "Power BI",
+    "Git e GitHub"
+  ],
+  "links": {
+    "email": "vitorfrios074@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/vitor-rios-dev",
+    "github": "https://github.com/Vfrios",
+    "whatsapp": "5531998402110"
+  },
+  "projects": [
+    {
+      "id": "tempo-otimizado",
+      "date": "2024-11",
+      "name": "Tempo Otimizado",
+      "description": {
+        "pt": "Plataforma web de gestão de tempo desenvolvida em equipe para a PUC Minas: cadastro de tarefas, cronograma semanal, dashboard com gráficos por categoria e dicas de estudo, sono e desempenho. Inclui todo o processo de Design Thinking, personas, wireframes no Figma e documentação.",
+        "en": "Time-management web platform built by a team at PUC Minas: task creation, weekly schedule, dashboard with charts by category, and study, sleep and performance tips. Includes the full Design Thinking process, personas, Figma wireframes and documentation."
+      },
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Node.js",
+        "JSON",
+        "Figma"
+      ],
+      "repository": "https://github.com/Vfrios/Trabalho-TI-1-puc-minas",
+      "image": "/projects/tempo-otimizado.svg"
+    },
+    {
+      "id": "sistema-esi",
+      "date": "2025-06",
+      "name": "Sistema ESI",
+      "description": {
+        "pt": "Sistema web para criar obras, montar projetos e salas, calcular carga térmica e ventilação e exportar propostas técnicas e comerciais em Word, com envio por e-mail. Tem login de cliente e administrador, painel de catálogos e banco SQLite.",
+        "en": "Web system to create construction jobs, build projects and rooms, calculate thermal load and ventilation, and export technical and commercial proposals to Word, sent by e-mail. Includes client and admin login, a catalog panel and an SQLite database."
+      },
+      "technologies": [
+        "Python",
+        "JavaScript",
+        "SQLite",
+        "python-docx",
+        "SMTP",
+        "Render"
+      ],
+      "repository": "https://github.com/Vfrios/app.esienergia",
+      "demo": "https://app-esienergia.onrender.com",
+      "image": "/projects/sistema-esi.svg"
+    },
+    {
+      "id": "portfolio",
+      "date": "2026-10",
+      "name": "Portfólio Profissional",
+      "description": {
+        "pt": "Este site: front-end em React, back-end em Spring Boot que serve o conteúdo e envia as mensagens do formulário por e-mail (SMTP).",
+        "en": "This website: React front end and a Spring Boot back end that serves the content and sends the contact form messages by e-mail (SMTP)."
+      },
+      "technologies": [
+        "Java",
+        "Spring Boot",
+        "Spring Mail",
+        "React",
+        "Vite",
+        "Docker"
+      ],
+      "repository": "https://github.com/Vfrios/portfolio-profissional",
+      "image": "/projects/portfolio.svg"
+    }
+  ],
+  "experiences": [
+    {
+      "id": "puc",
+      "organization": "PUC Minas",
+      "title": {
+        "pt": "Estudante — transição de carreira para TI",
+        "en": "Student — career transition into IT"
+      },
+      "period": {
+        "pt": "2024 – atual",
+        "en": "2024 – present"
+      },
+      "description": {
+        "pt": "Formação em tecnologia da informação, com projetos práticos de programação, banco de dados e desenvolvimento web.",
+        "en": "Information technology studies with hands-on projects in programming, databases and web development."
+      }
+    },
+    {
+      "id": "g5",
+      "organization": "PUC Minas — Projeto em equipe (Grupo 5)",
+      "title": {
+        "pt": "Desenvolvedor e documentação do projeto Tempo Otimizado",
+        "en": "Developer and documentation lead on the Tempo Otimizado project"
+      },
+      "period": {
+        "pt": "2024",
+        "en": "2024"
+      },
+      "description": {
+        "pt": "Trabalho com Scrum e Kanban, Design Thinking no Miro, protótipos no Figma e desenvolvimento da plataforma, com reuniões semanais da equipe.",
+        "en": "Worked with Scrum and Kanban, Design Thinking in Miro, Figma prototypes and platform development, with weekly team meetings."
+      }
+    },
+    {
+      "id": "esi",
+      "organization": "ESI Energia",
+      "title": {
+        "pt": "Desenvolvedor do sistema de propostas e climatização",
+        "en": "Developer of the proposals and HVAC system"
+      },
+      "period": {
+        "pt": "2025 – atual",
+        "en": "2025 – present"
+      },
+      "description": {
+        "pt": "Automação do fluxo de propostas: cadastro de obras, cálculos técnicos, geração de documentos Word e envio por e-mail, hospedado na nuvem.",
+        "en": "Proposal workflow automation: job registration, technical calculations, Word document generation and e-mail delivery, hosted in the cloud."
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+target/
+node_modules/
+frontend/node_modules/
+.idea/
+.vscode/
+*.iml
+# credenciais locais
+config/application.properties
+.env
