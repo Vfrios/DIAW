@@ -1,135 +1,72 @@
-# Portfólio Profissional — Vitor Rios
+# Portfólio — Vitor Rios
 
-Site de portfólio com **Java (Spring Boot)** no back-end e **React** no front-end, desenvolvido para o Laboratório 01 de DIAW (PUC Minas).
+Portfólio profissional desenvolvido com Java, Spring Boot e React. O site apresenta minha trajetória, projetos, experiências e canais de contato, com conteúdo em português e inglês.
 
-## 🔗 Links
+## Links
 
-- Site publicado: _(adicionar o link após o deploy)_
-- Repositório: _(adicionar o link do GitHub)_
-- Protótipos no Figma: _(adicionar o link)_
-- LinkedIn: https://www.linkedin.com/in/vitor-rios-dev · GitHub: https://github.com/Vfrios
+- **Site:** [diaw-gvp0.onrender.com](https://diaw-gvp0.onrender.com)
+- **Código-fonte:** [Vfrios/DIAW — portfolio-vitor](https://github.com/Vfrios/DIAW/tree/main/portfolio-vitor)
+- **LinkedIn:** [vitor-rios-dev](https://www.linkedin.com/in/vitor-rios-dev)
+- **GitHub:** [Vfrios](https://github.com/Vfrios)
 
-## 📌 Sobre o projeto
+## Funcionalidades
 
-O site tem quatro páginas, acessadas por um menu lateral (no celular vira um menu retrátil):
+- Navegação entre as páginas Sobre mim, Projetos, Experiências e Contato.
+- Conteúdo da interface em português e inglês.
+- Projetos apresentados com descrição, tecnologias, repositório e imagem.
+- Formulário de contato com validação dos campos e envio por e-mail.
+- Layout responsivo para telas grandes e dispositivos móveis.
 
-| Página | O que mostra |
-| --- | --- |
-| **Sobre mim** | Apresentação, formação, área de atuação, interesses e objetivo — em português e inglês (botão PT/EN) |
-| **Projetos** | Timeline do mais antigo ao mais recente, com descrição, tecnologias, link do GitHub e imagem/GIF |
-| **Experiências** | Instituição, atividade, período e descrição |
-| **Contato** | Ícones de e-mail, LinkedIn, GitHub (e WhatsApp, se preenchido) + formulário que envia e-mail |
+## Tecnologias
 
-Todo o conteúdo fica em um único arquivo, `src/main/resources/portfolio.json`, e o React o consome pela API `GET /api/portfolio`.
-
-## 🛠️ Tecnologias
-
-| Camada | Tecnologia |
+| Camada | Tecnologias |
 | --- | --- |
 | Back-end | Java 21, Spring Boot 3.5, Maven |
-| Front-end | React 19, Vite 7, React Router 7 (HashRouter), CSS puro |
-| Ícones | lucide-react |
-| E-mail | Spring Mail (SMTP do Gmail) |
-| Hospedagem | Docker + Render |
+| Front-end | React 19, Vite 7, React Router 7 |
+| Estilização e ícones | CSS, lucide-react |
+| E-mail | Spring Mail |
+| Hospedagem | Docker, Render |
 
-### Dependências
+## Executar localmente
 
-**Back-end** (`pom.xml`): `spring-boot-starter-web`, `spring-boot-starter-validation`, `spring-boot-starter-mail`, `frontend-maven-plugin` (compila o React durante o build do Maven).
+**Pré-requisitos:** JDK 21 e Maven 3.9 ou superior. O Maven instala o Node.js usado para compilar o front-end.
 
-**Front-end** (`frontend/package.json`): `react`, `react-dom`, `react-router-dom`, `lucide-react`, `vite`, `@vitejs/plugin-react`.
+Na raiz do repositório `DIAW`, execute:
 
-## 🏗️ Arquitetura
-
-```
-Navegador ──► Spring Boot (porta 8080)
-               ├── /            → site React compilado (arquivos estáticos)
-               ├── /api/portfolio → conteúdo (portfolio.json)
-               └── /api/contact   → valida o formulário e envia e-mail via SMTP
+```powershell
+mvn -f portfolio-vitor/pom.xml spring-boot:run
 ```
 
-O Maven compila o React e coloca o resultado em `target/classes/static`. Por isso **um único comando** sobe back-end e front-end juntos.
+Se o terminal já estiver na pasta `portfolio-vitor`, execute:
 
-## 📁 Estrutura de pastas
-
+```powershell
+mvn spring-boot:run
 ```
+
+Depois, acesse [http://localhost:8080](http://localhost:8080).
+
+O envio do formulário de contato depende de credenciais SMTP fornecidas ao ambiente de execução. Elas não são necessárias para iniciar o site e não devem ser adicionadas ao repositório.
+
+## Conteúdo e API
+
+Os textos, links, projetos e experiências são mantidos em `src/main/resources/portfolio.json`. O front-end carrega esse conteúdo pela API `GET /api/portfolio`.
+
+O formulário envia os dados para `POST /api/contact`. O back-end valida os campos antes de encaminhar a mensagem por e-mail.
+
+## Estrutura
+
+```text
 portfolio-vitor/
-├── config/
-│   ├── application.properties          # credenciais locais (NÃO vai para o Git)
-│   └── application.properties.example  # modelo
-├── frontend/
-│   ├── public/projects/                # imagens/GIFs dos projetos
-│   ├── src/
-│   │   ├── pages/                      # About, Projects, Experiences, Contact
-│   │   ├── App.jsx                     # layout, menu e rotas
-│   │   ├── i18n.js                     # textos PT/EN da interface
-│   │   └── styles.css
-│   ├── index.html
-│   ├── package.json
-│   └── vite.config.js
-├── src/main/
-│   ├── java/br/com/vitorrios/portfolio/
-│   │   ├── PortfolioApplication.java
-│   │   ├── PortfolioController.java    # GET /api/portfolio
-│   │   ├── ContactController.java      # POST /api/contact
-│   │   └── ContactRequest.java         # validação do formulário
-│   └── resources/
-│       ├── application.properties
-│       └── portfolio.json              # conteúdo do site
+├── frontend/                         # Aplicação React e arquivos estáticos
+├── src/main/java/                    # Aplicação Spring Boot e endpoints
+├── src/main/resources/
+│   ├── application.properties        # Configurações padrão do Spring
+│   └── portfolio.json               # Conteúdo do portfólio
 ├── Dockerfile
 ├── render.yaml
 └── pom.xml
 ```
 
-## ▶️ Como executar localmente
+## Implantação
 
-**Requisitos:** JDK 21 e Maven 3.9+ (o Node.js é baixado automaticamente pelo Maven).
-
-1. Clone o repositório e entre na pasta.
-2. Copie `config/application.properties.example` para `config/application.properties` e preencha:
-   ```properties
-   spring.mail.username=seu_email@gmail.com
-   spring.mail.password=senha_de_app_do_google_sem_espacos
-   portfolio.contact.to=seu_email@gmail.com
-   ```
-   A senha é uma **Senha de app** do Google (exige verificação em duas etapas): https://myaccount.google.com/apppasswords
-3. Em **um único terminal**, na raiz do projeto:
-   ```bash
-   mvn spring-boot:run
-   ```
-4. Abra http://localhost:8080
-
-> Na primeira execução o Maven baixa o Node e as dependências do React (leva alguns minutos). Para pular a etapa do front quando só alterou Java: `mvn spring-boot:run -Dskip.npm -Dskip.installnodenpm`.
-
-### Editando o conteúdo
-
-Altere `src/main/resources/portfolio.json` (textos PT/EN, projetos, experiências, links) e reinicie. Coloque prints/GIFs em `frontend/public/projects/` e aponte o caminho no campo `image` do projeto.
-
-## ☁️ Deploy (Render)
-
-1. Suba o projeto para o GitHub (o arquivo `config/application.properties` já está no `.gitignore`).
-2. No Render: **New → Web Service** → conecte o repositório → runtime **Docker** (ou **Blueprint**, usando o `render.yaml`).
-3. Em *Environment*, crie as variáveis:
-
-| Variável | Valor |
-| --- | --- |
-| `MAIL_USERNAME` | e-mail Gmail remetente |
-| `MAIL_PASSWORD` | senha de app do Google (sem espaços) |
-| `MAIL_TO` | e-mail que recebe as mensagens |
-
-4. Após o deploy, teste a navegação, o idioma e o envio do formulário, e cole o link na seção **Links**.
-
-## 🖼️ Protótipos e demonstração
-
-_(Adicionar aqui as imagens dos wireframes do Figma e os prints/GIFs do site funcionando.)_
-
-## 📚 Referências
-
-- [React](https://react.dev/) · [Vite](https://vite.dev/) · [Spring Boot](https://docs.spring.io/spring-boot/) · [Lucide](https://lucide.dev/)
-
-## 👤 Autor
-
-Vitor Rios — PUC Minas (Tecnologia da Informação).
-
-## 🙏 Agradecimentos
-
-Ao professor João Paulo Carneiro Aramuni, pela proposta do laboratório e pelo modelo de README.
+O projeto está hospedado no Render usando Docker. A configuração de implantação está em `render.yaml`.

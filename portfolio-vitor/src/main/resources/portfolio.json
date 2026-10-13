@@ -78,16 +78,15 @@
       "date": "2024-11",
       "name": "Tempo Otimizado",
       "description": {
-        "pt": "Plataforma web de gestão de tempo desenvolvida em equipe para a PUC Minas: cadastro de tarefas, cronograma semanal, dashboard com gráficos por categoria e dicas de estudo, sono e desempenho. Inclui todo o processo de Design Thinking, personas, wireframes no Figma e documentação.",
-        "en": "Time-management web platform built by a team at PUC Minas: task creation, weekly schedule, dashboard with charts by category, and study, sleep and performance tips. Includes the full Design Thinking process, personas, Figma wireframes and documentation."
+        "pt": "Plataforma web de gestão de tempo desenvolvida em equipe para a PUC Minas: cadastro de tarefas, cronograma semanal, dashboard com gráficos por categoria e dicas de estudo, sono e desempenho. Inclui documentação do projeto.",
+        "en": "Time-management web platform built by a team at PUC Minas: task creation, weekly schedule, dashboard with charts by category, and study, sleep and performance tips. Includes project documentation."
       },
       "technologies": [
         "HTML",
         "CSS",
         "JavaScript",
         "Node.js",
-        "JSON",
-        "Figma"
+        "JSON"
       ],
       "repository": "https://github.com/Vfrios/Trabalho-TI-1-puc-minas",
       "image": "/projects/tempo-otimizado.svg"
@@ -161,8 +160,8 @@
         "en": "2024"
       },
       "description": {
-        "pt": "Trabalho com Scrum e Kanban, Design Thinking no Miro, protótipos no Figma e desenvolvimento da plataforma, com reuniões semanais da equipe.",
-        "en": "Worked with Scrum and Kanban, Design Thinking in Miro, Figma prototypes and platform development, with weekly team meetings."
+        "pt": "Trabalho com Scrum e Kanban, Design Thinking no Miro e desenvolvimento da plataforma, com reuniões semanais da equipe.",
+        "en": "Worked with Scrum and Kanban, Design Thinking in Miro and platform development, with weekly team meetings."
       }
     },
     {
