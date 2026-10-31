@@ -1,0 +1,11 @@
+{
+  "name": "drivenow-lab2",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently --kill-others --names backend,frontend --prefix-colors blue,green \"mvn -f backend/pom.xml spring-boot:run\" \"pnpm --dir frontend dev\"",
+    "start": "pnpm dev"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

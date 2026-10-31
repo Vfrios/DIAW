@@ -1,0 +1,19 @@
+# Segredos
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Backend
+backend/target/
+*.class
+
+# Frontend
+node_modules/
+frontend/dist/
+
+# IDE / SO
+.idea/
+.vscode/
+*.iml
+.DS_Store
