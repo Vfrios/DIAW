@@ -4,9 +4,9 @@ spring:
   config:
     import: optional:file:./.env[.properties]
   datasource:
-    url: ${SPRING_DATASOURCE_URL:${DATABASE_URL:jdbc:postgresql://db.viljqddwqkmnsrpqfayl.supabase.co:5432/postgres}}
-    username: ${SPRING_DATASOURCE_USERNAME:${POSTGRES_USER:postgres}}
-    password: ${SPRING_DATASOURCE_PASSWORD:${POSTGRES_PASSWORD:}}
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://db.viljqddwqkmnsrpqfayl.supabase.co:5432/postgres}
+    username: ${SPRING_DATASOURCE_USERNAME:postgres}
+    password: ${SPRING_DATASOURCE_PASSWORD:}
     hikari:
       maximum-pool-size: 5
   jpa:
