@@ -210,44 +210,7 @@ O comando `pnpm start` também inicia os dois serviços. O terminal exibe os log
 
 ---
 
-## 🚀 Deploy no Render
 
-O front-end e a API são publicados juntos em **um único Web Service Docker**. O build gera os arquivos estáticos do React e os inclui no JAR Spring Boot; a aplicação serve as páginas e a API pelo mesmo domínio. As rotas do React, como `/login` e `/pedidos`, também funcionam ao abrir ou atualizar a página diretamente.
-
-### Criar pelo Blueprint (recomendado)
-
-1. Envie as alterações para uma branch do repositório `Vfrios/DIAW`.
-2. No Render, escolha **New → Blueprint** e selecione o repositório e a branch com o arquivo [`../render.yaml`](../render.yaml).
-3. Revise e aplique o Blueprint. Ele configura o serviço `drivenow-lab2` na região **Oregon**, plano **Free**, usando `LAB2/Dockerfile`; também gera `JWT_SECRET` automaticamente.
-4. Quando solicitado, informe as variáveis de conexão do Supabase:
-
-   | Variável | Valor |
-   | :--- | :--- |
-   | `SPRING_DATASOURCE_URL` | URL JDBC do Supabase (use o Session Pooler se necessário) |
-   | `SPRING_DATASOURCE_USERNAME` | Usuário do banco, por exemplo `postgres.<ref>` no Session Pooler |
-   | `SPRING_DATASOURCE_PASSWORD` | Senha do banco Supabase |
-
-5. Inicie o deploy e acompanhe os logs até o serviço ficar disponível. O endereço público aparecerá no painel do Render.
-
-O Blueprint define o contexto Docker como `LAB2`, não copia arquivos `.env` para a imagem e usa `RENDER_EXTERNAL_URL` para configurar o CORS. O Render fornece a variável `PORT` automaticamente; ela é usada pelo Spring Boot para escutar em `0.0.0.0`.
-
-### Configuração manual no formulário “New Web Service”
-
-Se preferir continuar pela tela de criação de Web Service:
-
-| Campo do Render | Valor |
-| :--- | :--- |
-| **Repository** | `Vfrios/DIAW` |
-| **Branch** | A branch enviada com os arquivos de deploy |
-| **Root Directory** | Deixe em branco |
-| **Language** | `Docker` |
-| **Dockerfile Path** | `LAB2/Dockerfile` |
-| **Docker Context** | `LAB2` (se o campo não estiver disponível, crie o serviço pelo Blueprint) |
-| **Region / Instance Type** | Oregon / Free |
-
-Cadastre também as três variáveis `SPRING_DATASOURCE_*` acima e `JWT_SECRET` como um valor aleatório e privado (no mínimo 32 caracteres). Não use a chave de exemplo do `application.yml` em produção.
-
-Não é necessário configurar `VITE_API_URL` no Render: o build de produção usa `/api` no mesmo domínio da aplicação. Para uma origem diferente, defina `APP_CORS_ALLOWED_ORIGINS` no ambiente do serviço.
 
 > [!NOTE]
 > Instâncias gratuitas podem suspender após inatividade; a primeira requisição depois da suspensão pode demorar enquanto o serviço reinicia. O banco Supabase continua sendo externo ao Render.
@@ -303,21 +266,6 @@ mvn -f backend/pom.xml clean package
         │   └── exception/         # ApiException + handler global
         ├── main/resources/application.yml
         └── test/java/...          # TokenServiceTest
-```
-
----
-
-## 🎥 Demonstração
->
-> Adicione aqui os prints/GIFs das telas: Login, Cadastro de cliente, Lista de pedidos, Detalhe do pedido (visão cliente e visão agente).
-
-| Tela | Captura |
-| :---: | :---: |
-| **Login** | _sua imagem aqui_ |
-| **Meu cadastro (CRUD)** | _sua imagem aqui_ |
-| **Pedidos / Status** | _sua imagem aqui_ |
-| **Avaliação (agente)** | _sua imagem aqui_ |
-
 ---
 
 ## 🧪 Testes
@@ -344,17 +292,10 @@ mvn test
 
 | 👤 Nome | :octocat: GitHub |
 | --------- | ----------------- |
-| _Nome do aluno 1_ | [@usuario1](https://github.com/usuario1) |
-| _Nome do aluno 2_ | [@usuario2](https://github.com/usuario2) |
+| Vitor de Freitas Rios | [@Vfrios](https://github.com/Vfrios) |
 
 ---
 
-## 🤝 Contribuição
-
-1. Faça um `fork` do projeto.
-2. Crie uma branch (`git checkout -b feature/minha-feature`).
-3. Commit com [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) (`git commit -m 'feat: nova funcionalidade'`).
-4. `git push origin feature/minha-feature` e abra um **Pull Request**.
 
 ---
 
