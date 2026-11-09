@@ -1,26 +1,26 @@
 # DIAW
-Arquivos de trabalho DIAW 2026.2
 
-## Menu das tarefas
+Repositório dos projetos desenvolvidos para a disciplina de Desenvolvimento e Integração de Aplicações Web (DIAW) em 2026.2.
 
-Para escolher qual tarefa avaliar, abra o arquivo **`index.html`** (que fica na raiz deste repositório) em qualquer navegador. Basta dar dois cliques nele, sem instalar nada.
+## Demonstrações online
 
-O menu mostra, para cada tarefa, o que ela entrega, como abrir, como executar (com os comandos prontos para copiar), os documentos que acompanham e a demonstração online, quando existe.
+Todos os projetos estão publicados no serviço [DIAW completo no Render](https://diaw-completo.onrender.com). Abra um projeto pelo menu e, quando aparecer, clique em **Iniciar e abrir**. As aplicações Spring iniciam sob demanda; a primeira abertura pode levar alguns instantes e, no plano gratuito, projetos sem uso podem parar automaticamente.
 
-Se o GitHub Pages estiver ativado para este repositório, o mesmo menu fica disponível em <https://vfrios.github.io/DIAW/>.
+| Projeto | Pasta | Rota pública | Abrir no menu |
+| --- | --- | --- | --- |
+| Perfil dos Candidatos TSE (AV1 B) | [`ATV1B`](./ATV1B/) | `/atv1b/` | [Abrir](https://diaw-completo.onrender.com/#atv1b) |
+| DriveNow (Laboratório 02) | [`LAB2`](./LAB2/) | `/lab2/` | [Abrir](https://diaw-completo.onrender.com/#lab2) |
+| Pokédex React | [`pokedex-react`](./pokedex-react/) | `/pokedex/` | [Abrir](https://diaw-completo.onrender.com/#pokedex) |
+| Portfólio profissional | [`portfolio-vitor`](./portfolio-vitor/) | `/portfolio/` | [Abrir](https://diaw-completo.onrender.com/#portfolio) |
+| API de Clima de Belo Horizonte | [`Trabalho 1 - API CLIMA`](./Trabalho%201%20-%20API%20CLIMA/) | `/trabalho1-clima/clima` | [Abrir](https://diaw-completo.onrender.com/#trabalho1-clima) |
+| AuraLogin (Trabalho 2) | [`Trabalho2 - AuraLogin`](./Trabalho2%20-%20AuraLogin/) | `/trabalho2-auralogin/login` | [Abrir](https://diaw-completo.onrender.com/#trabalho2-auralogin) |
 
-| Tarefa | Pasta | Demonstração |
-| --- | --- | --- |
-| Trabalho 1: API de Clima de Belo Horizonte | `Trabalho 1 - API CLIMA` | |
-| Trabalho 2: AuraLogin | `Trabalho2 - AuraLogin` | |
-| AV1 (B): Candidatos TSE | `ATV1B` | |
-| Portfólio profissional | `portfolio-vitor` | <https://diaw-gvp0.onrender.com> |
-| Laboratório 02: DriveNow | `LAB2` | <https://diaw-1-5tm3.onrender.com> |
+O [menu principal online](https://diaw-completo.onrender.com/) também permite pesquisar e filtrar os projetos. Para consultar o estado do serviço, acesse [`/_status`](https://diaw-completo.onrender.com/_status).
 
-## Como adicionar uma tarefa nova ao menu
+## Menu local
 
-1. Crie a pasta da tarefa na raiz do repositório.
-2. Abra o arquivo `tarefas.js`, copie o bloco **MODELO** que está no final dele e cole dentro da lista `DIAW_TAREFAS`.
-3. Preencha os campos. A tarefa aparece no menu, na busca e nos filtros automaticamente.
+Para consultar as tarefas sem acessar o serviço online, abra [`index.html`](./index.html) em qualquer navegador. O menu local mostra descrições, instruções para executar e documentação de cada projeto. Se o GitHub Pages estiver habilitado, o menu também fica disponível em <https://vfrios.github.io/DIAW/>.
 
-Para deixar uma tarefa preparada sem mostrá-la ainda, use `visivel: false`.
+## Implantação
+
+Os projetos são publicados juntos em um único serviço Render. As rotas, configuração e instruções de implantação estão documentadas em [`deploy/README.md`](./deploy/README.md); o manifesto público está em [`deploy/projetos.json`](./deploy/projetos.json).

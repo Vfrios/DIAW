@@ -2,6 +2,8 @@
 
 Aplicação Spring Boot que lê o CSV de candidatos do TSE (eleições de 2026, MG) e exibe o **perfil** dos candidatos em uma tela única, com filtros por **gênero**, **escolaridade** e **faixa etária**, incluindo a foto oficial de cada um.
 
+**Demonstração no Render:** [Abrir Perfil dos Candidatos TSE](https://diaw-completo.onrender.com/#atv1b). No menu, clique em **Iniciar e abrir**; a primeira inicialização pode levar alguns instantes.
+
 ---
 
 ### Captura de Tela

@@ -2,6 +2,8 @@
 
 Este deploy publica o menu e os seis projetos num único Web Service Docker. O Nginx entrega o menu e a Pokédex estática; o orquestrador inicia os projetos Spring somente quando alguém seleciona **Iniciar e abrir**. Assim, o container não mantém as JVMs ligadas sem uso.
 
+**Serviço publicado:** [https://diaw-completo.onrender.com](https://diaw-completo.onrender.com). Abra um projeto pelo menu; as aplicações Spring iniciam sob demanda.
+
 Os projetos fonte não são alterados: o Docker build trabalha em cópias temporárias e adapta nelas os caminhos para `/<slug>/`. Para desenvolver localmente, continuam valendo os comandos originais de cada projeto.
 
 | Projeto | Rota pública | Runtime |

@@ -4,7 +4,7 @@ Portfólio profissional desenvolvido com Java, Spring Boot e React. O site apres
 
 ## Links
 
-- **Site:** [diaw-gvp0.onrender.com](https://diaw-gvp0.onrender.com)
+- **Site:** [Abrir portfólio no menu](https://diaw-completo.onrender.com/#portfolio). No menu, clique em **Iniciar e abrir** para iniciar a aplicação.
 - **Código-fonte:** [Vfrios/DIAW — portfolio-vitor](https://github.com/Vfrios/DIAW/tree/main/portfolio-vitor)
 - **LinkedIn:** [vitor-rios-dev](https://www.linkedin.com/in/vitor-rios-dev)
 - **GitHub:** [Vfrios](https://github.com/Vfrios)

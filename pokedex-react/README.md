@@ -2,6 +2,8 @@
 
 Pokédex interativa feita com **React + Vite** (Atividade 03 – Desenvolvimento e Integração de Aplicações Web).
 
+**Demonstração no Render:** [Abrir Pokédex](https://diaw-completo.onrender.com/#pokedex). A aplicação estática abre diretamente pelo menu.
+
 ## Funcionalidades
 
 - Lista dos 151 Pokémon com ID, nome, tipos e os 6 atributos (HP, Attack, Defense, Special Attack, Special Defense, Speed)
@@ -19,6 +21,7 @@ Pokédex interativa feita com **React + Vite** (Atividade 03 – Desenvolvimento
 npm install
 npm run dev
 ```
+
 
 Abra no navegador: **http://localhost:5173**
 

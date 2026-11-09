@@ -8,6 +8,8 @@ em um endpoint próprio, em formato JSON.
 A **Open-Meteo** foi escolhida porque é gratuita e **não exige API Key**
 para o uso feito neste projeto, o que simplifica a configuração.
 
+**Demonstração no Render:** [Abrir API de Clima](https://diaw-completo.onrender.com/#trabalho1-clima). No menu, clique em **Iniciar e abrir**; a primeira inicialização pode levar alguns instantes.
+
 ## Tecnologias
 
 - Java 17

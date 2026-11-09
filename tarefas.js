@@ -32,6 +32,10 @@ window.DIAW_TAREFAS = [
       "API REST em Spring Boot que consulta a previsão do tempo de Belo Horizonte na Open-Meteo, " +
       "uma API pública que não exige chave, e devolve os dados já tratados em JSON.",
     pasta: "Trabalho 1 - API CLIMA",
+    demo: {
+      url: "https://diaw-completo.onrender.com/#trabalho1-clima",
+      aviso: "Abra o projeto no menu online e clique em Iniciar e abrir. No plano gratuito, a primeira abertura pode levar alguns instantes."
+    },
     tecnologias: ["Java 17", "Spring Boot 3.3", "Maven", "RestTemplate", "Open-Meteo"],
     integrantes: ["Brayan Mendes de Carvalho", "Vitor de Freitas Rios"],
     requisitos: ["Java 17", "Maven"],
@@ -70,6 +74,10 @@ window.DIAW_TAREFAS = [
       "Aplicação de login, cadastro e recuperação de senha com Spring Security. " +
       "As senhas são guardadas com BCrypt e os dados ficam num banco H2 em memória.",
     pasta: "Trabalho2 - AuraLogin",
+    demo: {
+      url: "https://diaw-completo.onrender.com/#trabalho2-auralogin",
+      aviso: "Abra o projeto no menu online e clique em Iniciar e abrir. No plano gratuito, a primeira abertura pode levar alguns instantes."
+    },
     tecnologias: ["Java 17", "Spring Boot 3.3", "Spring Security", "Spring Data JPA", "H2", "Thymeleaf", "BCrypt"],
     integrantes: ["Vitor de Freitas Rios", "Brayan Mendes de Carvalho"],
     requisitos: ["Java 17", "Maven"],
@@ -119,6 +127,10 @@ window.DIAW_TAREFAS = [
       "Lê o CSV de candidatos do TSE (Minas Gerais, 2026) e mostra o perfil de cada um numa tela única, " +
       "com a foto oficial e filtros por gênero, escolaridade e faixa etária.",
     pasta: "ATV1B",
+    demo: {
+      url: "https://diaw-completo.onrender.com/#atv1b",
+      aviso: "Abra o projeto no menu online e clique em Iniciar e abrir. No plano gratuito, a primeira abertura pode levar alguns instantes."
+    },
     tecnologias: ["Java 25", "Spring Boot 3.5", "Thymeleaf", "opencsv", "Maven"],
     requisitos: ["Java 25", "Maven"],
     executar: [
@@ -148,6 +160,43 @@ window.DIAW_TAREFAS = [
 
   /* ------------------------------------------------------------------ */
   {
+    id: "pokedex",
+    visivel: true,
+    rotulo: "Atividade 03",
+    titulo: "Pokédex React",
+    tipo: "Aplicação web",
+    resumo:
+      "Pokédex interativa com busca, filtro por tipo, detalhes e atributos dos 151 Pokémon, " +
+      "área de treinadores e favoritos.",
+    pasta: "pokedex-react",
+    demo: {
+      url: "https://diaw-completo.onrender.com/#pokedex",
+      aviso: "A Pokédex é servida como aplicação estática e abre diretamente no menu online."
+    },
+    tecnologias: ["React", "Vite", "JavaScript"],
+    integrantes: ["Vitor Rios", "Brayan Mendes"],
+    requisitos: ["Node.js"],
+    executar: [
+      { titulo: "Entre na pasta do projeto", comando: "cd pokedex-react" },
+      { titulo: "Instale as dependências", comando: "npm install" },
+      { titulo: "Inicie a aplicação", comando: "npm run dev" }
+    ],
+    local: "http://localhost:5173",
+    abrirEm: "/",
+    documentos: [
+      { nome: "README do projeto", caminho: "README.md" }
+    ],
+    estrutura: [
+      { caminho: "src/components", descricao: "Componentes da interface" },
+      { caminho: "src/data/pokedex-data.json", descricao: "Dados locais dos Pokémon e treinadores" }
+    ],
+    observacoes: [
+      "As imagens são carregadas da PokéAPI; os dados locais continuam disponíveis sem internet."
+    ]
+  },
+
+  /* ------------------------------------------------------------------ */
+  {
     id: "portfolio",
     visivel: true,
     rotulo: "Portfólio",
@@ -158,8 +207,8 @@ window.DIAW_TAREFAS = [
       "O formulário de contato valida os campos e envia a mensagem por e-mail.",
     pasta: "portfolio-vitor",
     demo: {
-      url: "https://diaw-gvp0.onrender.com",
-      aviso: "Hospedado no plano gratuito do Render: se estiver parado, a primeira abertura pode levar cerca de um minuto."
+      url: "https://diaw-completo.onrender.com/#portfolio",
+      aviso: "Abra o projeto no menu online e clique em Iniciar e abrir. No plano gratuito, a primeira abertura pode levar alguns instantes."
     },
     tecnologias: ["Java 21", "Spring Boot 3.5", "React 19", "Vite 7", "React Router 7", "Spring Mail", "Docker", "Render"],
     integrantes: ["Vitor de Freitas Rios"],
@@ -199,8 +248,8 @@ window.DIAW_TAREFAS = [
       "executam contratos e concedem crédito. Login com JWT, CRUD de cliente e banco no Supabase.",
     pasta: "LAB2",
     demo: {
-      url: "https://diaw-1-5tm3.onrender.com",
-      aviso: "Hospedado no plano gratuito do Render: se estiver parado, a primeira abertura pode levar cerca de um minuto."
+      url: "https://diaw-completo.onrender.com/#lab2",
+      aviso: "Abra o projeto no menu online e clique em Iniciar e abrir. No plano gratuito, a primeira abertura pode levar alguns instantes."
     },
     tecnologias: ["Java 25", "Spring Boot 4.0", "React 19", "Vite 7", "Supabase (PostgreSQL)", "JWT", "Maven", "pnpm"],
     integrantes: ["Vitor de Freitas Rios"],

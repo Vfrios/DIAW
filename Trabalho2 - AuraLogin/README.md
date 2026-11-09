@@ -2,6 +2,8 @@
 
 Aplicacao de login e cadastro feita com Spring Boot + Thymeleaf, para a Atividade 02.
 
+**Demonstração no Render:** [Abrir AuraLogin](https://diaw-completo.onrender.com/#trabalho2-auralogin). No menu, clique em **Iniciar e abrir**; a primeira inicialização pode levar alguns instantes.
+
 ## Integrantes
 - Vitor de Freitas Rios - 926041
 - Brayan Mendes de Carvalho - 925861

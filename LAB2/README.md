@@ -41,7 +41,7 @@
 
 ## 🔗 Links Úteis
 
-* 🌐 **Demo Online:** https://diaw-1-5tm3.onrender.com
+* 🌐 **Demo Online:** [Abrir DriveNow no menu](https://diaw-completo.onrender.com/#lab2). No menu, clique em **Iniciar e abrir** para iniciar a aplicação.
 - 📖 **Modelagem UML:** [Casos de Uso](docs/casos-de-uso.md) · [Histórias de Usuário](docs/historias-de-usuario.md) · [Diagrama de Classes](docs/diagrama-de-classes.md) · [Diagrama de Pacotes](docs/diagrama-de-pacotes.md)
 - 🗄️ **Banco de dados:** [Supabase](https://supabase.com/docs)
 
