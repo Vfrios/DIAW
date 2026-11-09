@@ -1,0 +1,23 @@
+.app { max-width: 1200px; margin: 0 auto; padding: 0 20px 60px; }
+
+.tabs { display: flex; gap: 8px; margin: 22px 0 18px; }
+.tab {
+  padding: 9px 18px; border-radius: 999px; border: 1px solid var(--line);
+  background: transparent; color: var(--muted); font-weight: 600;
+}
+.tab.active { background: var(--yellow); color: #1a1a1a; border-color: var(--yellow); }
+
+.toolbar { display: flex; flex-direction: column; gap: 14px; margin-bottom: 20px; }
+.toolbar-row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+
+.results-info { color: var(--muted); margin: 0 0 14px; font-size: 0.95rem; }
+
+.empty {
+  text-align: center; padding: 60px 20px; border: 2px dashed var(--line);
+  border-radius: 16px; color: var(--muted);
+}
+.empty strong { display: block; color: var(--text); font-size: 1.2rem; margin-bottom: 6px; }
+.empty button {
+  margin-top: 14px; padding: 8px 16px; border-radius: 8px; border: 0;
+  background: var(--red); color: #fff; font-weight: 600;
+}

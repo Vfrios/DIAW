@@ -1,0 +1,6 @@
+.stat { display: grid; grid-template-columns: 110px 40px 1fr; align-items: center; gap: 10px; margin: 8px 0; font-size: 0.92rem; }
+.stat .label { color: var(--muted); }
+.stat .value { font-weight: 700; text-align: right; }
+.stat .track { height: 10px; border-radius: 6px; background: var(--panel-2); overflow: hidden; }
+.stat .fill { height: 100%; border-radius: 6px; transition: width 0.5s ease; }
+@media (max-width: 420px) { .stat { grid-template-columns: 90px 34px 1fr; } }

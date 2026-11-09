@@ -1,0 +1,29 @@
+.overlay {
+  position: fixed; inset: 0; background: #05080fcc; display: grid; place-items: center;
+  padding: 16px; z-index: 50; overflow-y: auto;
+}
+.modal {
+  position: relative; width: min(720px, 100%); border-radius: 24px; overflow: hidden;
+  background: var(--panel); border: 1px solid var(--line);
+  animation: pop 0.2s ease-out;
+}
+@keyframes pop { from { transform: scale(0.96); opacity: 0; } to { transform: none; opacity: 1; } }
+.modal .top {
+  padding: 22px 24px 0; background: linear-gradient(160deg, var(--c1), var(--c2));
+  display: flex; align-items: flex-end; gap: 16px; flex-wrap: wrap;
+}
+.modal .top .info { flex: 1 1 200px; padding-bottom: 20px; color: #111; }
+.modal .top .info .id { font-weight: 800; opacity: 0.7; }
+.modal .top h2 { margin: 0 0 8px; font-size: 2rem; color: #fff; text-shadow: 0 2px 6px #0006; }
+.modal .top .types { display: flex; gap: 6px; }
+.modal .top img { width: 220px; max-width: 45%; filter: drop-shadow(0 8px 10px #0008); }
+.modal .body { padding: 20px 24px 24px; }
+.modal .body h3 { margin: 18px 0 8px; font-size: 1rem; color: var(--muted); font-weight: 600; }
+.modal .total { display: flex; justify-content: space-between; border-top: 1px solid var(--line); margin-top: 10px; padding-top: 10px; font-weight: 700; }
+.modal .close {
+  position: absolute; top: 12px; right: 12px; width: 36px; height: 36px; border-radius: 50%;
+  border: 0; background: #0006; color: #fff; font-size: 1.1rem; z-index: 3;
+}
+.modal .owners { display: flex; gap: 8px; flex-wrap: wrap; }
+.modal .owners span { padding: 4px 12px; border-radius: 999px; background: var(--panel-2); font-size: 0.88rem; }
+.modal .nav { display: flex; justify-content: space-between; margin-top: 18px; }

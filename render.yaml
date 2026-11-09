@@ -1,13 +1,21 @@
 services:
   - type: web
-    name: drivenow-lab2
+    name: diaw-completo
+    branch: main
     runtime: docker
     plan: free
     region: oregon
-    dockerfilePath: LAB2/Dockerfile
-    dockerContext: LAB2
-    healthCheckPath: /
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /healthz
     envVars:
+      - key: MODO
+        value: sob-demanda
+      - key: MAX_APPS
+        value: "2"
+      - key: MEM_LIMIT_MB
+        value: "360"
+      - key: IDLE_MINUTOS
+        value: "10"
       - key: SPRING_DATASOURCE_URL
         sync: false
       - key: SPRING_DATASOURCE_USERNAME
@@ -15,8 +23,10 @@ services:
       - key: SPRING_DATASOURCE_PASSWORD
         sync: false
       - key: JWT_SECRET
-        generateValue: true
-      - key: APP_CORS_ALLOWED_ORIGINS
         sync: false
-      - key: SERVER_PORT
-        value: 10000
+      - key: MAIL_USERNAME
+        sync: false
+      - key: MAIL_PASSWORD
+        sync: false
+      - key: MAIL_TO
+        sync: false

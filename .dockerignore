@@ -1,0 +1,16 @@
+.git
+.github
+**/.git
+**/.env
+**/.env.*
+**/node_modules
+**/target
+**/dist
+**/.next
+**/.vite
+**/.pnpm-store
+**/coverage
+**/*.log
+**/*.pdf
+**/.DS_Store
+portfolio-vitor/config/application.properties

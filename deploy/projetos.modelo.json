@@ -1,0 +1,35 @@
+[
+  {
+    // Identificador único usado nas URLs /<slug>/ e pela API de controle.
+    "slug": "exemplo",
+    "visivel": true,
+    "rotulo": "Tarefa nova",
+    "titulo": "Nome do projeto",
+    // Pasta do projeto relativa à raiz do repositório.
+    "pasta": "Minha Pasta",
+    // Valores permitidos: spring, spring-react, estatico, custom.
+    "tipo": "spring",
+    // Use somente versões para as quais há JRE no Dockerfile: 17, 21 ou 25.
+    "java": 17,
+    // Executado no build do container, dentro da pasta do projeto.
+    "build": "mvn -q -DskipTests package",
+    // Caminho do JAR gerado; obrigatório para spring e spring-react.
+    "artefato": "target/minha-aplicacao.jar",
+    // Use null quando o projeto não possui frontend.
+    "frontend": null,
+    // null gera uma porta determinística. Estáticos não usam porta.
+    "porta": null,
+    // Heap máximo da JVM. Não é o RSS total do processo.
+    "memoria": "128m",
+    // Rota HTTP usada para confirmar que a aplicação iniciou.
+    "healthcheck": "/",
+    // Variáveis não secretas passadas ao processo.
+    "env": {
+      "SERVER_SERVLET_CONTEXT_PATH": "/exemplo"
+    },
+    // Cadastre os valores dessas chaves em Environment Variables no Render.
+    "envSecretas": [],
+    // Para spring-react, o build do frontend pode ser feito antes do Maven.
+    "frontendBuild": null
+  }
+]

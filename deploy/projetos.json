@@ -1,0 +1,124 @@
+[
+  {
+    "slug": "atv1b",
+    "visivel": true,
+    "rotulo": "AV1 (B)",
+    "titulo": "Perfil dos Candidatos TSE",
+    "pasta": "ATV1B",
+    "tipo": "spring",
+    "java": 25,
+    "build": "mvn -q -DskipTests package",
+    "artefato": "target/CandidatosTSE2-0.0.1-SNAPSHOT.jar",
+    "frontend": null,
+    "porta": null,
+    "memoria": "160m",
+    "healthcheck": "/",
+    "env": {
+      "SERVER_SERVLET_CONTEXT_PATH": "/atv1b"
+    },
+    "envSecretas": []
+  },
+  {
+    "slug": "lab2",
+    "visivel": true,
+    "rotulo": "Laboratório 02",
+    "titulo": "DriveNow: sistema de aluguel de carros",
+    "pasta": "LAB2",
+    "tipo": "spring-react",
+    "java": 25,
+    "build": "mvn -q -DskipTests -f backend/pom.xml package",
+    "frontendBuild": "corepack pnpm install --frozen-lockfile && corepack pnpm --dir frontend build",
+    "artefato": "backend/target/aluguel-carros-1.0.0.jar",
+    "frontend": "frontend",
+    "porta": null,
+    "memoria": "160m",
+    "healthcheck": "/",
+    "env": {
+      "SERVER_SERVLET_CONTEXT_PATH": "/lab2"
+    },
+    "envSecretas": [
+      "SPRING_DATASOURCE_URL",
+      "SPRING_DATASOURCE_USERNAME",
+      "SPRING_DATASOURCE_PASSWORD",
+      "JWT_SECRET"
+    ]
+  },
+  {
+    "slug": "pokedex",
+    "visivel": true,
+    "rotulo": "Atividade 03",
+    "titulo": "Pokédex React",
+    "pasta": "pokedex-react",
+    "tipo": "estatico",
+    "java": null,
+    "build": "npm install --no-audit --no-fund && npm run build",
+    "artefato": "dist",
+    "frontend": ".",
+    "porta": null,
+    "memoria": null,
+    "healthcheck": null,
+    "env": {},
+    "envSecretas": []
+  },
+  {
+    "slug": "portfolio",
+    "visivel": true,
+    "rotulo": "Portfólio",
+    "titulo": "Portfólio profissional de Vitor Rios",
+    "pasta": "portfolio-vitor",
+    "tipo": "spring-react",
+    "java": 21,
+    "build": "mvn -q -DskipTests package",
+    "artefato": "target/portfolio-1.0.0.jar",
+    "frontend": "frontend",
+    "porta": null,
+    "memoria": "128m",
+    "healthcheck": "/api/portfolio",
+    "env": {
+      "SERVER_SERVLET_CONTEXT_PATH": "/portfolio"
+    },
+    "envSecretas": [
+      "MAIL_USERNAME",
+      "MAIL_PASSWORD",
+      "MAIL_TO"
+    ]
+  },
+  {
+    "slug": "trabalho1-clima",
+    "visivel": true,
+    "rotulo": "Trabalho 1",
+    "titulo": "API de Clima de Belo Horizonte",
+    "pasta": "Trabalho 1 - API CLIMA",
+    "tipo": "spring",
+    "java": 17,
+    "build": "mvn -q -DskipTests package",
+    "artefato": "target/clima-api-1.0.0.jar",
+    "frontend": null,
+    "porta": null,
+    "memoria": "96m",
+    "healthcheck": "/clima",
+    "env": {
+      "SERVER_SERVLET_CONTEXT_PATH": "/trabalho1-clima"
+    },
+    "envSecretas": []
+  },
+  {
+    "slug": "trabalho2-auralogin",
+    "visivel": true,
+    "rotulo": "Trabalho 2",
+    "titulo": "AuraLogin: login e cadastro",
+    "pasta": "Trabalho2 - AuraLogin",
+    "tipo": "spring",
+    "java": 17,
+    "build": "mvn -q -DskipTests package",
+    "artefato": "target/auralogin-1.0.0.jar",
+    "frontend": null,
+    "porta": null,
+    "memoria": "128m",
+    "healthcheck": "/login",
+    "env": {
+      "SERVER_SERVLET_CONTEXT_PATH": "/trabalho2-auralogin"
+    },
+    "envSecretas": []
+  }
+]

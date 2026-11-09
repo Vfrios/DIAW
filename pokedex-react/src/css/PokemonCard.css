@@ -1,0 +1,33 @@
+.card {
+  position: relative; text-align: left; padding: 14px; border-radius: 18px;
+  background: var(--panel); border: 1px solid var(--line);
+  overflow: hidden; transition: transform 0.15s, border-color 0.15s;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.card::before {
+  content: ''; position: absolute; inset: 0 0 auto 0; height: 90px;
+  background: linear-gradient(160deg, var(--c1), var(--c2));
+  opacity: 0.55;
+}
+.card:hover { transform: translateY(-4px); border-color: var(--c1); }
+.card > * { position: relative; }
+.card .id { font-weight: 800; color: #ffffffcc; font-size: 0.9rem; }
+.card .fav {
+  position: absolute; top: 8px; right: 10px; background: none; border: 0;
+  font-size: 1.4rem; color: #fff; text-shadow: 0 1px 4px #0008; padding: 2px 6px;
+}
+.card .art { height: 130px; display: grid; place-items: center; }
+.card .art img { max-height: 130px; max-width: 100%; object-fit: contain; filter: drop-shadow(0 6px 8px #0008); }
+.card .art .fallback { font-size: 2.4rem; font-weight: 800; opacity: 0.4; }
+.card h3 { margin: 0; font-size: 1.15rem; }
+.card .types { display: flex; gap: 6px; flex-wrap: wrap; min-height: 26px; }
+.card .stats {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px 4px;
+  margin: 4px 0 0; padding: 0; list-style: none; font-size: 0.78rem; color: var(--muted);
+}
+.card .stats b { display: block; color: var(--text); font-size: 0.95rem; }
+.card-wrap { position: relative; }
+.card-wrap .fav-btn {
+  position: absolute; top: 8px; right: 10px; z-index: 2; background: none; border: 0;
+  font-size: 1.5rem; line-height: 1; color: #fff; text-shadow: 0 1px 4px #000a; padding: 2px 6px;
+}
