@@ -61,6 +61,7 @@ fi
 
 curl --silent --fail "$BASE_URL/" | grep -q "Trabalhos de DIAW"
 curl --silent --fail "$BASE_URL/pokedex/" | grep -q "root"
+curl --silent --fail "$BASE_URL/pokedex/" | grep -q "Voltar ao menu"
 curl --silent --fail "$BASE_URL/_status" | node -e '
 let data = ""; process.stdin.on("data", chunk => data += chunk).on("end", () => {
   const status = JSON.parse(data);
@@ -105,6 +106,7 @@ check_app lab2 /
 check_app portfolio /api/portfolio
 check_app trabalho1-clima /clima/belo-horizonte
 check_app trabalho2-auralogin /login
+curl --silent --show-error --fail "$BASE_URL/trabalho2-auralogin/login" | grep -q "Voltar ao menu"
 echo "Rotas das quatro aplicações JVM: OK"
 
 echo "==> Medindo duas JVMs simultâneas (Clima e AuraLogin)"

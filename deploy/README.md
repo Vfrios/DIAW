@@ -4,6 +4,8 @@ Este deploy publica o menu e os seis projetos num único Web Service Docker. O N
 
 **Serviço publicado:** [https://diaw-completo.onrender.com](https://diaw-completo.onrender.com). Abra um projeto pelo menu; as aplicações Spring iniciam sob demanda.
 
+As páginas HTML das aplicações incluem um botão fixo **Voltar ao menu**, inclusive a Pokédex, para retornar à tela de escolha sem depender da navegação do navegador.
+
 Os projetos fonte não são alterados: o Docker build trabalha em cópias temporárias e adapta nelas os caminhos para `/<slug>/`. Para desenvolver localmente, continuam valendo os comandos originais de cada projeto.
 
 | Projeto | Rota pública | Runtime |
