@@ -1,0 +1,129 @@
+[
+ {
+  "id": 1,
+  "name": "Ash",
+  "badges": 9,
+  "pokemonIds": [
+   25,
+   3,
+   6,
+   9,
+   131,
+   143
+  ]
+ },
+ {
+  "id": 2,
+  "name": "Brock",
+  "badges": 1,
+  "pokemonIds": [
+   74,
+   95
+  ]
+ },
+ {
+  "id": 3,
+  "name": "Misty",
+  "badges": 2,
+  "pokemonIds": [
+   120,
+   121
+  ]
+ },
+ {
+  "id": 4,
+  "name": "Lt. Surge",
+  "badges": 3,
+  "pokemonIds": [
+   26
+  ]
+ },
+ {
+  "id": 5,
+  "name": "Erika",
+  "badges": 4,
+  "pokemonIds": [
+   114,
+   70,
+   44
+  ]
+ },
+ {
+  "id": 6,
+  "name": "Koga",
+  "badges": 5,
+  "pokemonIds": [
+   48,
+   48,
+   48,
+   49
+  ]
+ },
+ {
+  "id": 7,
+  "name": "Sabrina",
+  "badges": 6,
+  "pokemonIds": [
+   63,
+   64,
+   65
+  ]
+ },
+ {
+  "id": 8,
+  "name": "Blaine",
+  "badges": 7,
+  "pokemonIds": [
+   38,
+   78,
+   59
+  ]
+ },
+ {
+  "id": 9,
+  "name": "Giovanni",
+  "badges": 8,
+  "pokemonIds": [
+   51,
+   53,
+   31,
+   34,
+   112
+  ]
+ },
+ {
+  "id": 10,
+  "name": "Gary",
+  "badges": 9,
+  "pokemonIds": [
+   28,
+   65,
+   103,
+   82,
+   38,
+   134
+  ]
+ },
+ {
+  "id": 11,
+  "name": "Team Rocket",
+  "badges": 0,
+  "pokemonIds": [
+   23,
+   52,
+   109
+  ]
+ },
+ {
+  "id": 12,
+  "name": "Lance",
+  "badges": 9,
+  "pokemonIds": [
+   130,
+   148,
+   149,
+   142,
+   149
+  ]
+ }
+]
