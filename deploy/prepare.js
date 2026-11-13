@@ -93,6 +93,7 @@ function patchFrontendSource(project) {
     contact = contact.replace("fetch('/api/contact'", "fetch(`${import.meta.env.BASE_URL}api/contact`");
     fs.writeFileSync(contactPath, contact);
   }
+
 }
 
 function generateBuildPlans(projects) {
@@ -147,7 +148,9 @@ function main() {
       patchFrontendSource(project);
       if (project.frontendBuild) {
         const frontendDir = path.join(projectDir, project.frontend);
-        run(`corepack prepare pnpm@12.5.1 --activate && ${project.frontendBuild}`,
+        const setup = /\b(?:corepack\s+)?pnpm\b/.test(project.frontendBuild)
+          ? 'corepack prepare pnpm@12.5.1 --activate && ' : '';
+        run(`${setup}${project.frontendBuild}`,
           projectDir, { DIAW_BASE: `/${project.slug}/` });
         const staticSource = path.join(frontendDir, 'dist');
         if (!fs.existsSync(staticSource)) throw new Error(`O build do frontend de "${project.slug}" não criou frontend/dist.`);

@@ -2,26 +2,74 @@
   "atv1b": {
     "tipo": "Aplicação Spring MVC",
     "resumo": "Consulta os perfis dos candidatos de Minas Gerais nas eleições de 2026, com filtros por gênero, escolaridade e faixa etária e fotos oficiais.",
-    "tecnologias": ["Java 25", "Spring Boot 3.5", "Thymeleaf", "OpenCSV"],
-    "integrantes": ["Vitor de Freitas Rios"],
-    "requisitos": ["JDK 25", "Maven"],
+    "tecnologias": [
+      "Java 25",
+      "Spring Boot 3.5",
+      "Thymeleaf",
+      "OpenCSV"
+    ],
+    "integrantes": [
+      "Vitor de Freitas Rios"
+    ],
+    "requisitos": [
+      "JDK 25",
+      "Maven"
+    ],
     "endpoints": [
-      { "metodo": "GET", "caminho": "/", "descricao": "Lista candidatos e aceita filtros de gênero, escolaridade e idade.", "abrir": true }
+      {
+        "metodo": "GET",
+        "caminho": "/",
+        "descricao": "Lista candidatos e aceita filtros de gênero, escolaridade e idade.",
+        "abrir": true
+      }
     ],
-    "documentos": [{ "nome": "README do projeto", "caminho": "README.md" }],
+    "documentos": [
+      {
+        "nome": "README do projeto",
+        "caminho": "README.md"
+      }
+    ],
     "estrutura": [
-      { "caminho": "src/main/java", "descricao": "Aplicação Spring MVC e filtros de candidatos" },
-      { "caminho": "src/main/resources/data", "descricao": "Arquivo CSV de candidatos" },
-      { "caminho": "src/main/resources/static/images", "descricao": "Fotos dos candidatos" }
+      {
+        "caminho": "src/main/java",
+        "descricao": "Aplicação Spring MVC e filtros de candidatos"
+      },
+      {
+        "caminho": "src/main/resources/data",
+        "descricao": "Arquivo CSV de candidatos"
+      },
+      {
+        "caminho": "src/main/resources/static/images",
+        "descricao": "Fotos dos candidatos"
+      }
     ],
-    "observacoes": ["A aplicação e as imagens são publicadas sob /atv1b/ sem modificar os arquivos do projeto."]
+    "observacoes": [
+      "A aplicação e as imagens são publicadas sob /atv1b/ sem modificar os arquivos do projeto."
+    ]
   },
   "lab2": {
     "tipo": "Full-stack",
     "resumo": "Sistema web de gestão de aluguéis. Clientes criam e acompanham pedidos; empresas e bancos avaliam, executam contratos e concedem crédito. Login com JWT, CRUD de cliente e banco no Supabase.",
-    "tecnologias": ["Java 25", "Spring Boot 4.0", "React 19", "Vite 7", "Supabase (PostgreSQL)", "JWT", "Maven", "pnpm"],
-    "integrantes": ["Vitor de Freitas Rios"],
-    "requisitos": ["JDK 25", "Maven 3.9 ou superior", "Node.js 20.19 ou superior", "pnpm", "Projeto Supabase configurado"],
+    "tecnologias": [
+      "Java 25",
+      "Spring Boot 4.0",
+      "React 19",
+      "Vite 7",
+      "Supabase (PostgreSQL)",
+      "JWT",
+      "Maven",
+      "pnpm"
+    ],
+    "integrantes": [
+      "Vitor de Freitas Rios"
+    ],
+    "requisitos": [
+      "JDK 25",
+      "Maven 3.9 ou superior",
+      "Node.js 20.19 ou superior",
+      "pnpm",
+      "Projeto Supabase configurado"
+    ],
     "roteiro": [
       "Cadastre uma conta Cliente e complete o cadastro.",
       "Crie um pedido de aluguel. Ele nasce com o status Em análise.",
@@ -29,95 +77,442 @@
       "Volte como cliente e veja o status atualizado."
     ],
     "endpoints": [
-      { "metodo": "POST", "caminho": "/api/auth/register e /api/auth/login", "descricao": "Cadastro e login, com token JWT." },
-      { "metodo": "GET", "caminho": "/api/clientes", "descricao": "CRUD de cliente." },
-      { "metodo": "GET", "caminho": "/api/pedidos", "descricao": "Pedidos de aluguel: criar, modificar, consultar, cancelar, avaliar e contratar." }
+      {
+        "metodo": "POST",
+        "caminho": "/api/auth/register e /api/auth/login",
+        "descricao": "Cadastro e login, com token JWT."
+      },
+      {
+        "metodo": "GET",
+        "caminho": "/api/clientes",
+        "descricao": "CRUD de cliente."
+      },
+      {
+        "metodo": "GET",
+        "caminho": "/api/pedidos",
+        "descricao": "Pedidos de aluguel: criar, modificar, consultar, cancelar, avaliar e contratar."
+      }
     ],
     "documentos": [
-      { "nome": "README do projeto", "caminho": "README.md" },
-      { "nome": "Casos de uso", "caminho": "docs/casos-de-uso.md" },
-      { "nome": "Histórias de usuário", "caminho": "docs/historias-de-usuario.md" },
-      { "nome": "Diagrama de classes", "caminho": "docs/diagrama-de-classes.md" },
-      { "nome": "Diagrama de pacotes", "caminho": "docs/diagrama-de-pacotes.md" },
-      { "nome": "Script RLS do Supabase", "caminho": "docs/supabase-rls.sql" }
+      {
+        "nome": "README do projeto",
+        "caminho": "README.md"
+      },
+      {
+        "nome": "Casos de uso",
+        "caminho": "docs/casos-de-uso.md"
+      },
+      {
+        "nome": "Histórias de usuário",
+        "caminho": "docs/historias-de-usuario.md"
+      },
+      {
+        "nome": "Diagrama de classes",
+        "caminho": "docs/diagrama-de-classes.md"
+      },
+      {
+        "nome": "Diagrama de pacotes",
+        "caminho": "docs/diagrama-de-pacotes.md"
+      },
+      {
+        "nome": "Script RLS do Supabase",
+        "caminho": "docs/supabase-rls.sql"
+      }
     ],
     "estrutura": [
-      { "caminho": "backend", "descricao": "Spring Boot: model, controller, service, repository e security" },
-      { "caminho": "frontend", "descricao": "React + Vite: páginas, componentes, contexto e serviços" },
-      { "caminho": "docs", "descricao": "Modelagem UML e script do banco" }
+      {
+        "caminho": "backend",
+        "descricao": "Spring Boot: model, controller, service, repository e security"
+      },
+      {
+        "caminho": "frontend",
+        "descricao": "React + Vite: páginas, componentes, contexto e serviços"
+      },
+      {
+        "caminho": "docs",
+        "descricao": "Modelagem UML e script do banco"
+      }
     ],
-    "observacoes": ["Usa banco externo Supabase."]
+    "observacoes": [
+      "Usa banco externo Supabase."
+    ]
   },
-  "pokedex": {
+  "pokedex-react": {
     "tipo": "Aplicação React",
     "resumo": "Pokédex interativa com busca, filtros por tipo, detalhes e estatísticas dos 151 Pokémon, treinadores e favoritos.",
-    "tecnologias": ["React 18", "Vite 5", "JavaScript"],
-    "integrantes": ["Vitor Rios", "Brayan Mendes"],
-    "requisitos": ["Navegador moderno"],
-    "documentos": [{ "nome": "README do projeto", "caminho": "README.md" }],
-    "estrutura": [
-      { "caminho": "src/components", "descricao": "Componentes da interface" },
-      { "caminho": "src/data/pokedex-data.json", "descricao": "Dados locais dos Pokémon e treinadores" }
+    "tecnologias": [
+      "React 18",
+      "Vite 5",
+      "JavaScript"
     ],
-    "observacoes": ["As imagens vêm da PokéAPI; os dados locais continuam disponíveis sem internet."]
+    "integrantes": [
+      "Vitor Rios",
+      "Brayan Mendes"
+    ],
+    "requisitos": [
+      "Navegador moderno"
+    ],
+    "documentos": [
+      {
+        "nome": "README do projeto",
+        "caminho": "README.md"
+      }
+    ],
+    "estrutura": [
+      {
+        "caminho": "src/components",
+        "descricao": "Componentes da interface"
+      },
+      {
+        "caminho": "src/data/pokedex-data.json",
+        "descricao": "Dados locais dos Pokémon e treinadores"
+      }
+    ],
+    "observacoes": [
+      "As imagens vêm da PokéAPI; os dados locais continuam disponíveis sem internet."
+    ]
+  },
+  "pokedex": {
+    "tipo": "Full-stack",
+    "resumo": "Pokédex interativa com API REST em Spring Boot e persistência no MongoDB Atlas. Listagem dos 151 Pokémon, filtros, busca por nome e CRUD completo sincronizado com o banco.",
+    "tecnologias": [
+      "Java 17",
+      "Spring Boot 3.3",
+      "Spring Data MongoDB",
+      "React 18",
+      "Vite 5",
+      "MongoDB Atlas"
+    ],
+    "integrantes": [
+      "Vitor de Freitas Rios",
+      "Brayan Mendes de Carvalho"
+    ],
+    "requisitos": [
+      "JDK 17",
+      "Maven 3.9+",
+      "Node.js 18+",
+      "Cluster MongoDB Atlas"
+    ],
+    "documentos": [
+      {
+        "nome": "README do projeto",
+        "caminho": "README.md"
+      },
+      {
+        "nome": "Divisão de Commits",
+        "caminho": "COMMITS.md"
+      }
+    ],
+    "estrutura": [
+      {
+        "caminho": "backend",
+        "descricao": "API REST Spring Boot com Data MongoDB e Seeder"
+      },
+      {
+        "caminho": "frontend",
+        "descricao": "Interface React com Vite e chamadas à API"
+      },
+      {
+        "caminho": "tools",
+        "descricao": "Scripts Python de extração e carga inicial"
+      }
+    ],
+    "observacoes": [
+      "Persistência em MongoDB Atlas com fallback de dados locais."
+    ]
+  },
+  "sistema-matriculas": {
+    "tipo": "Full-stack",
+    "resumo": "Sistema de gestão acadêmica para universidade gerir cursos, disciplinas, períodos e matrículas de alunos, com regras de negócio automatizadas e notificação de cobranças.",
+    "tecnologias": [
+      "Java 25",
+      "Spring Boot 4.0",
+      "Spring Security",
+      "Spring Data MongoDB",
+      "React 19",
+      "Vite 7",
+      "React Router",
+      "MongoDB Atlas"
+    ],
+    "integrantes": [
+      "Vitor de Freitas Rios"
+    ],
+    "requisitos": [
+      "JDK 25",
+      "Maven 3.9+",
+      "Node.js 18+",
+      "Cluster MongoDB Atlas"
+    ],
+    "documentos": [
+      {
+        "nome": "README do projeto",
+        "caminho": "README.md"
+      }
+    ],
+    "estrutura": [
+      {
+        "caminho": "backend",
+        "descricao": "API REST em Spring Boot 4 com segurança por perfil e regras de negócio"
+      },
+      {
+        "caminho": "frontend",
+        "descricao": "Interface React 19 com portais para Aluno, Professor e Secretaria"
+      }
+    ],
+    "observacoes": [
+      "Autenticação stateless com perfis ALUNO, PROFESSOR e SECRETARIA."
+    ]
   },
   "portfolio": {
     "tipo": "Full-stack",
     "resumo": "Portfólio em português e inglês com páginas Sobre mim, Projetos, Experiências e Contato. O formulário valida e envia mensagens por e-mail.",
-    "tecnologias": ["Java 21", "Spring Boot 3.5", "React 19", "Vite 7", "React Router 7", "Spring Mail"],
-    "integrantes": ["Vitor de Freitas Rios"],
-    "requisitos": ["JDK 21", "Maven 3.9 ou superior"],
+    "tecnologias": [
+      "Java 21",
+      "Spring Boot 3.5",
+      "React 19",
+      "Vite 7",
+      "React Router 7",
+      "Spring Mail"
+    ],
+    "integrantes": [
+      "Vitor de Freitas Rios"
+    ],
+    "requisitos": [
+      "JDK 21",
+      "Maven 3.9 ou superior"
+    ],
     "endpoints": [
-      { "metodo": "GET", "caminho": "/api/portfolio", "descricao": "Conteúdo do portfólio.", "abrir": true },
-      { "metodo": "POST", "caminho": "/api/contact", "descricao": "Valida e envia a mensagem do formulário." }
+      {
+        "metodo": "GET",
+        "caminho": "/api/portfolio",
+        "descricao": "Conteúdo do portfólio.",
+        "abrir": true
+      },
+      {
+        "metodo": "POST",
+        "caminho": "/api/contact",
+        "descricao": "Valida e envia a mensagem do formulário."
+      }
     ],
-    "documentos": [{ "nome": "README do projeto", "caminho": "README.md" }],
+    "documentos": [
+      {
+        "nome": "README do projeto",
+        "caminho": "README.md"
+      }
+    ],
     "estrutura": [
-      { "caminho": "frontend", "descricao": "Aplicação React e arquivos estáticos" },
-      { "caminho": "src/main/java", "descricao": "Aplicação Spring Boot e endpoints" }
+      {
+        "caminho": "frontend",
+        "descricao": "Aplicação React e arquivos estáticos"
+      },
+      {
+        "caminho": "src/main/java",
+        "descricao": "Aplicação Spring Boot e endpoints"
+      }
     ],
-    "observacoes": ["O envio do formulário depende das variáveis de ambiente de e-mail; o site pode ser visualizado sem elas."]
+    "observacoes": [
+      "O envio do formulário depende das variáveis de ambiente de e-mail; o site pode ser visualizado sem elas."
+    ]
   },
   "trabalho1-clima": {
     "tipo": "API REST",
     "resumo": "API REST em Spring Boot que consulta a previsão do tempo de Belo Horizonte na Open-Meteo e devolve os dados tratados em JSON.",
-    "tecnologias": ["Java 17", "Spring Boot 3.3", "Maven", "RestTemplate", "Open-Meteo"],
-    "integrantes": ["Brayan Mendes de Carvalho", "Vitor de Freitas Rios"],
-    "requisitos": ["Java 17", "Maven"],
-    "endpoints": [
-      { "metodo": "GET", "caminho": "/clima", "descricao": "Clima atual de Belo Horizonte.", "abrir": true },
-      { "metodo": "GET", "caminho": "/clima/belo-horizonte", "descricao": "Clima de Belo Horizonte.", "abrir": true },
-      { "metodo": "GET", "caminho": "/clima/cidade?nome=Rio%20de%20Janeiro&latitude=-22.9068&longitude=-43.1729", "descricao": "Clima de outra cidade por coordenadas.", "abrir": true }
+    "tecnologias": [
+      "Java 17",
+      "Spring Boot 3.3",
+      "Maven",
+      "RestTemplate",
+      "Open-Meteo"
     ],
-    "documentos": [{ "nome": "README do projeto", "caminho": "README.md" }],
-    "observacoes": ["Consulta a Open-Meteo, que requer conexão com a internet."]
+    "integrantes": [
+      "Brayan Mendes de Carvalho",
+      "Vitor de Freitas Rios"
+    ],
+    "requisitos": [
+      "Java 17",
+      "Maven"
+    ],
+    "endpoints": [
+      {
+        "metodo": "GET",
+        "caminho": "/clima",
+        "descricao": "Clima atual de Belo Horizonte.",
+        "abrir": true
+      },
+      {
+        "metodo": "GET",
+        "caminho": "/clima/belo-horizonte",
+        "descricao": "Clima de Belo Horizonte.",
+        "abrir": true
+      },
+      {
+        "metodo": "GET",
+        "caminho": "/clima/cidade?nome=Rio%20de%20Janeiro&latitude=-22.9068&longitude=-43.1729",
+        "descricao": "Clima de outra cidade por coordenadas.",
+        "abrir": true
+      }
+    ],
+    "documentos": [
+      {
+        "nome": "README do projeto",
+        "caminho": "README.md"
+      }
+    ],
+    "observacoes": [
+      "Consulta a Open-Meteo, que requer conexão com a internet."
+    ]
   },
   "trabalho2-auralogin": {
     "tipo": "Web MVC",
     "resumo": "Login, cadastro e recuperação simulada de senha com Spring Security, Thymeleaf, BCrypt, JPA e banco H2 em memória.",
-    "tecnologias": ["Java 17", "Spring Boot 3.3", "Spring Security", "Spring Data JPA", "H2", "Thymeleaf", "BCrypt"],
-    "integrantes": ["Vitor de Freitas Rios", "Brayan Mendes de Carvalho"],
-    "requisitos": ["Java 17", "Maven"],
+    "tecnologias": [
+      "Java 17",
+      "Spring Boot 3.3",
+      "Spring Security",
+      "Spring Data JPA",
+      "H2",
+      "Thymeleaf",
+      "BCrypt"
+    ],
+    "integrantes": [
+      "Vitor de Freitas Rios",
+      "Brayan Mendes de Carvalho"
+    ],
+    "requisitos": [
+      "Java 17",
+      "Maven"
+    ],
     "acesso": {
       "usuario": "demo",
       "senha": "demo1234",
       "nota": "Também é possível criar uma conta nova."
     },
     "endpoints": [
-      { "metodo": "GET", "caminho": "/login", "descricao": "Tela de login.", "abrir": true },
-      { "metodo": "GET", "caminho": "/register", "descricao": "Tela de cadastro.", "abrir": true },
-      { "metodo": "GET", "caminho": "/recoverpassword", "descricao": "Recuperação simulada de senha.", "abrir": true },
-      { "metodo": "GET", "caminho": "/home", "descricao": "Área autenticada.", "abrir": true },
-      { "metodo": "POST", "caminho": "/logout", "descricao": "Encerra a sessão." }
+      {
+        "metodo": "GET",
+        "caminho": "/login",
+        "descricao": "Tela de login.",
+        "abrir": true
+      },
+      {
+        "metodo": "GET",
+        "caminho": "/register",
+        "descricao": "Tela de cadastro.",
+        "abrir": true
+      },
+      {
+        "metodo": "GET",
+        "caminho": "/recoverpassword",
+        "descricao": "Recuperação simulada de senha.",
+        "abrir": true
+      },
+      {
+        "metodo": "GET",
+        "caminho": "/home",
+        "descricao": "Área autenticada.",
+        "abrir": true
+      },
+      {
+        "metodo": "POST",
+        "caminho": "/logout",
+        "descricao": "Encerra a sessão."
+      }
     ],
-    "documentos": [{ "nome": "README do projeto", "caminho": "README.md" }],
+    "documentos": [
+      {
+        "nome": "README do projeto",
+        "caminho": "README.md"
+      }
+    ],
     "estrutura": [
-      { "caminho": "src/main/java/auralogin", "descricao": "Configuração, controladores, modelo e serviços" },
-      { "caminho": "src/main/resources/templates", "descricao": "Telas Thymeleaf" }
+      {
+        "caminho": "src/main/java/auralogin",
+        "descricao": "Configuração, controladores, modelo e serviços"
+      },
+      {
+        "caminho": "src/main/resources/templates",
+        "descricao": "Telas Thymeleaf"
+      }
     ],
     "observacoes": [
       "O banco H2 fica em memória; os cadastros desaparecem quando a aplicação reinicia.",
       "A recuperação de senha é simulada e não envia e-mail."
+    ]
+  },
+  "pokedex-fullstack": {
+    "tipo": "Full-stack",
+    "resumo": "Pok?dex com pesquisa, filtros por tipo, treinadores e cadastro, edi??o e exclus?o de Pok?mon persistidos no MongoDB.",
+    "tecnologias": [
+      "Java 17",
+      "Spring Boot 3.3",
+      "React 18",
+      "Vite 5",
+      "MongoDB Atlas"
+    ],
+    "requisitos": [
+      "Java 17",
+      "Maven",
+      "Node.js",
+      "MongoDB Atlas"
+    ],
+    "documentos": [
+      {
+        "nome": "README do projeto",
+        "caminho": "README.md"
+      }
+    ],
+    "endpoints": [
+      {
+        "metodo": "GET",
+        "caminho": "/api/pokemons",
+        "descricao": "Consulta os Pok?mon.",
+        "abrir": true
+      },
+      {
+        "metodo": "GET",
+        "caminho": "/api/types",
+        "descricao": "Tipos dispon?veis.",
+        "abrir": true
+      }
+    ],
+    "observacoes": [
+      "Requer POKEDEX_MONGODB_URI no Render, com o banco pokedex na URI. Os dados iniciais são importados automaticamente."
+    ]
+  },
+  "sistema-matriculas": {
+    "tipo": "Full-stack",
+    "resumo": "Gest?o de cursos, disciplinas e matr?culas com acesso de aluno, professor e secretaria, regras de vagas e cobran?as.",
+    "tecnologias": [
+      "Java 25",
+      "Spring Boot 4.0",
+      "React 19",
+      "Vite 7",
+      "MongoDB Atlas"
+    ],
+    "requisitos": [
+      "Java 25",
+      "Maven",
+      "Node.js",
+      "MongoDB Atlas"
+    ],
+    "documentos": [
+      {
+        "nome": "README do projeto",
+        "caminho": "README.md"
+      }
+    ],
+    "acesso": {
+      "usuario": "secretaria",
+      "senha": "secretaria123",
+      "nota": "Professor: prof.aramuni / prof123. Aluno: aluno1 / aluno123. Contas criadas no primeiro in?cio."
+    },
+    "roteiro": [
+      "Entre como secretaria para gerenciar cursos, disciplinas e per?odos.",
+      "Entre como aluno1 para realizar matr?culas e consultar cobran?as.",
+      "Entre como prof.aramuni para consultar os alunos das suas disciplinas."
+    ],
+    "observacoes": [
+      "Requer MATRICULAS_MONGODB_URI no Render, com o banco sistema_matriculas na URI."
     ]
   }
 }

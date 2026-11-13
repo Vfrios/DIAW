@@ -44,7 +44,7 @@
     ]
   },
   {
-    "slug": "pokedex",
+    "slug": "pokedex-react",
     "visivel": true,
     "rotulo": "Atividade 03",
     "titulo": "Pokédex React",
@@ -59,6 +59,55 @@
     "healthcheck": null,
     "env": {},
     "envSecretas": []
+  },
+  {
+    "slug": "pokedex",
+    "visivel": true,
+    "rotulo": "Atividade 04",
+    "titulo": "Pokédex Full Stack",
+    "pasta": "pokedex",
+    "tipo": "spring-react",
+    "java": 17,
+    "build": "mvn -q -DskipTests -f backend/pom.xml package",
+    "frontendBuild": "npm --prefix frontend install --no-audit --no-fund && npm --prefix frontend run build",
+    "artefato": "backend/target/pokedex-api-1.0.0.jar",
+    "frontend": "frontend",
+    "porta": null,
+    "memoria": "128m",
+    "healthcheck": "/",
+    "env": {
+      "SERVER_SERVLET_CONTEXT_PATH": "/pokedex"
+    },
+    "envSecretas": [
+      "MONGODB_URI",
+      "POKEDEX_MONGODB_URI"
+    ]
+  },
+  {
+    "slug": "sistema-matriculas",
+    "visivel": true,
+    "rotulo": "Laboratório 03",
+    "titulo": "Sistema de Matrículas",
+    "pasta": "sistema-matriculas",
+    "tipo": "spring-react",
+    "java": 25,
+    "build": "mvn -q -DskipTests -f backend/pom.xml package",
+    "frontendBuild": "npm --prefix frontend install --no-audit --no-fund && npm --prefix frontend run build",
+    "artefato": "backend/target/matriculas-0.0.1-SNAPSHOT.jar",
+    "frontend": "frontend",
+    "porta": null,
+    "memoria": "160m",
+    "healthcheck": "/",
+    "env": {
+      "SERVER_SERVLET_CONTEXT_PATH": "/sistema-matriculas"
+    },
+    "envSecretas": [
+      "MONGODB_USER",
+      "MONGODB_PASSWORD",
+      "MONGODB_HOST",
+      "MONGODB_DATABASE",
+      "MONGODB_URI"
+    ]
   },
   {
     "slug": "portfolio",

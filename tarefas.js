@@ -21,6 +21,55 @@ window.DIAW_CONFIG = {
 
 window.DIAW_TAREFAS = [
 
+  {
+    id: "pokedex",
+    visivel: true,
+    rotulo: "Atividade 04",
+    titulo: "Pokédex Full Stack",
+    tipo: "Full-stack",
+    resumo: "Pokédex com API Spring Boot, interface React e dados persistidos no MongoDB.",
+    pasta: "pokedex",
+    demo: {
+      url: "https://diaw-completo.onrender.com/#pokedex",
+      aviso: "Abra no menu online e clique em Iniciar e abrir."
+    },
+    tecnologias: ["Java 17", "Spring Boot 3.3", "React 18", "Vite 5", "MongoDB Atlas"],
+    requisitos: ["Java 17", "Maven", "Node.js", "MongoDB Atlas"],
+    executar: [
+      { titulo: "Backend", comando: "cd pokedex/backend && mvn spring-boot:run" },
+      { titulo: "Frontend", comando: "cd pokedex/frontend && npm install && npm run dev" }
+    ],
+    local: "http://localhost:5173",
+    documentos: [{ nome: "README do projeto", caminho: "README.md" }]
+  },
+
+  {
+    id: "sistema-matriculas",
+    visivel: true,
+    rotulo: "Laboratório 03",
+    titulo: "Sistema de Matrículas",
+    tipo: "Full-stack",
+    resumo: "Gestão de cursos, disciplinas, períodos e matrículas com acesso de aluno, professor e secretaria.",
+    pasta: "sistema-matriculas",
+    demo: {
+      url: "https://diaw-completo.onrender.com/#sistema-matriculas",
+      aviso: "Abra no menu online e clique em Iniciar e abrir."
+    },
+    tecnologias: ["Java 25", "Spring Boot 4.0", "React 19", "Vite 7", "MongoDB Atlas"],
+    requisitos: ["Java 25", "Maven", "Node.js", "MongoDB Atlas"],
+    executar: [
+      { titulo: "Backend", comando: "cd sistema-matriculas/backend && mvn spring-boot:run" },
+      { titulo: "Frontend", comando: "cd sistema-matriculas/frontend && npm install && npm run dev" }
+    ],
+    local: "http://localhost:5173",
+    acesso: {
+      usuario: "secretaria",
+      senha: "secretaria123",
+      nota: "Professor: prof.aramuni / prof123. Aluno: aluno1 / aluno123."
+    },
+    documentos: [{ nome: "README do projeto", caminho: "README.md" }]
+  },
+
   /* ------------------------------------------------------------------ */
   {
     id: "clima",
@@ -160,7 +209,7 @@ window.DIAW_TAREFAS = [
 
   /* ------------------------------------------------------------------ */
   {
-    id: "pokedex",
+    id: "pokedex-react",
     visivel: true,
     rotulo: "Atividade 03",
     titulo: "Pokédex React",
@@ -170,7 +219,7 @@ window.DIAW_TAREFAS = [
       "área de treinadores e favoritos.",
     pasta: "pokedex-react",
     demo: {
-      url: "https://diaw-completo.onrender.com/#pokedex",
+      url: "https://diaw-completo.onrender.com/#pokedex-react",
       aviso: "A Pokédex é servida como aplicação estática e abre diretamente no menu online."
     },
     tecnologias: ["React", "Vite", "JavaScript"],

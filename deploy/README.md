@@ -1,6 +1,6 @@
 # Um serviço Render para os projetos de DIAW
 
-Este deploy publica o menu e os seis projetos num único Web Service Docker. O Nginx entrega o menu e a Pokédex estática; o orquestrador inicia os projetos Spring somente quando alguém seleciona **Iniciar e abrir**. Assim, o container não mantém as JVMs ligadas sem uso.
+Este deploy publica o menu e os oito projetos num único Web Service Docker. O Nginx entrega o menu e a Pokédex estática; o orquestrador inicia os projetos Spring somente quando alguém seleciona **Iniciar e abrir**. Assim, o container não mantém as JVMs ligadas sem uso.
 
 **Serviço publicado:** [https://diaw-completo.onrender.com](https://diaw-completo.onrender.com). Abra um projeto pelo menu; as aplicações Spring iniciam sob demanda.
 
@@ -12,12 +12,18 @@ Os projetos fonte não são alterados: o Docker build trabalha em cópias tempor
 |---|---|---|
 | Perfil dos Candidatos TSE (`ATV1B`) | `/atv1b/` | Spring Boot, Java 25 |
 | DriveNow (`LAB2`) | `/lab2/` | Spring Boot + React, Java 25 |
-| Pokédex | `/pokedex/` | React estático |
+| Pokédex React | `/pokedex-react/` | React estático |
+| Pokédex Full Stack (`pokedex`) | `/pokedex/` | Spring Boot + React, Java 17, MongoDB |
+| Sistema de Matrículas | `/sistema-matriculas/` | Spring Boot + React, Java 25, MongoDB |
 | Portfólio | `/portfolio/` | Spring Boot + React, Java 21 |
 | API de clima | `/trabalho1-clima/` | Spring Boot, Java 17 |
 | AuraLogin | `/trabalho2-auralogin/` | Spring Boot, Java 17 |
 
 ## Configuração do Render
+
+Configure `POKEDEX_MONGODB_URI` com a URI completa do Atlas incluindo o banco `pokedex`, e `MATRICULAS_MONGODB_URI` incluindo o banco `sistema_matriculas`. As aplicações podem usar o mesmo cluster com bancos separados. Libere no Atlas o acesso de rede necessário para o Render e não publique as URIs no Git.
+
+Os frontends novos são compilados dentro da imagem e incorporados aos respectivos JARs. Assets, APIs e rotas do React respeitam o subcaminho de cada projeto. Os dados de demonstração são criados na primeira inicialização de um banco vazio.
 
 Conecte o repositório ao Blueprint da raiz (`render.yaml`) e use:
 

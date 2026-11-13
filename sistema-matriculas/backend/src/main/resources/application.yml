@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: sistema-matriculas
+  config:
+    # Le o .env (formato KEY=VALUE) da raiz do projeto ou da pasta backend
+    import: "optional:file:./.env[.properties],optional:file:../.env[.properties]"
+  mongodb:
+    uri: ${MATRICULAS_MONGODB_URI:${MONGODB_URI:mongodb+srv://${MONGODB_USER:user}:${MONGODB_PASSWORD:pass}@${MONGODB_HOST:localhost}/${MONGODB_DATABASE:sistema_matriculas}?retryWrites=true&w=majority}}
+  data:
+    mongodb:
+      uri: ${MATRICULAS_MONGODB_URI:${MONGODB_URI:mongodb+srv://${MONGODB_USER:user}:${MONGODB_PASSWORD:pass}@${MONGODB_HOST:localhost}/${MONGODB_DATABASE:sistema_matriculas}?retryWrites=true&w=majority}}
+      auto-index-creation: true
+
+server:
+  port: ${SERVER_PORT:8080}
+
+app:
+  valor-credito: ${VALOR_CREDITO:150.00}
+  cors:
+    allowed-origins: ${CORS_ORIGINS:http://localhost:5173}
+  seed:
+    enabled: ${SEED_ENABLED:true}

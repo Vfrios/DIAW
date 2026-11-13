@@ -13,7 +13,7 @@ if ! command -v curl >/dev/null 2>&1; then
   echo "Erro: curl é necessário para executar os testes." >&2
   exit 1
 fi
-for variable in SPRING_DATASOURCE_URL SPRING_DATASOURCE_USERNAME SPRING_DATASOURCE_PASSWORD JWT_SECRET; do
+for variable in SPRING_DATASOURCE_URL SPRING_DATASOURCE_USERNAME SPRING_DATASOURCE_PASSWORD JWT_SECRET POKEDEX_MONGODB_URI MATRICULAS_MONGODB_URI; do
   eval "value=\${$variable-}"
   if [ -z "$value" ]; then
     echo "Erro: defina $variable no ambiente antes do teste (o script não lê nem exibe arquivos .env)." >&2
@@ -41,10 +41,12 @@ docker run -d --name "$CONTAINER" \
   -e SPRING_DATASOURCE_USERNAME \
   -e SPRING_DATASOURCE_PASSWORD \
   -e JWT_SECRET \
+  -e POKEDEX_MONGODB_URI \
+  -e MATRICULAS_MONGODB_URI \
   -e MAIL_USERNAME \
   -e MAIL_PASSWORD \
   -e MAIL_TO \
-  "$CONTAINER" >/dev/null
+  diaw-completo:teste >/dev/null
 
 ready=0
 attempt=0
@@ -60,8 +62,8 @@ if [ "$ready" -ne 1 ]; then
 fi
 
 curl --silent --fail "$BASE_URL/" | grep -q "Trabalhos de DIAW"
-curl --silent --fail "$BASE_URL/pokedex/" | grep -q "root"
-curl --silent --fail "$BASE_URL/pokedex/" | grep -q "Voltar ao menu"
+curl --silent --fail "$BASE_URL/pokedex-react/" | grep -q "root"
+curl --silent --fail "$BASE_URL/pokedex-react/" | grep -q "Voltar ao menu"
 curl --silent --fail "$BASE_URL/_status" | node -e '
 let data = ""; process.stdin.on("data", chunk => data += chunk).on("end", () => {
   const status = JSON.parse(data);
@@ -107,7 +109,17 @@ check_app portfolio /api/portfolio
 check_app trabalho1-clima /clima/belo-horizonte
 check_app trabalho2-auralogin /login
 curl --silent --show-error --fail "$BASE_URL/trabalho2-auralogin/login" | grep -q "Voltar ao menu"
-echo "Rotas das quatro aplicações JVM: OK"
+check_app pokedex /
+curl --silent --show-error --fail "$BASE_URL/pokedex/api/pokemons" | node -e '
+let data = ""; process.stdin.on("data", chunk => data += chunk).on("end", () => {
+  if (!Array.isArray(JSON.parse(data))) process.exit(1);
+});'
+check_app sistema-matriculas /
+curl --silent --show-error --fail "$BASE_URL/sistema-matriculas/login" | grep -q "root"
+curl --silent --show-error --fail "$BASE_URL/sistema-matriculas/aluno" | grep -q "root"
+code="$(curl --silent -o /dev/null -w '%{http_code}' "$BASE_URL/sistema-matriculas/api/auth/me")"
+[ "$code" = "401" ] || { echo "API de matrículas sem autenticação deveria responder 401, recebeu $code" >&2; exit 1; }
+echo "Rotas das aplicações JVM e autenticação de matrículas: OK"
 
 echo "==> Medindo duas JVMs simultâneas (Clima e AuraLogin)"
 curl --silent --show-error --fail -X POST "$BASE_URL/_api/apps/trabalho1-clima/stop" >/dev/null
